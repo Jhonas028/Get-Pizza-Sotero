@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- >> header -->
+    <header class="py-7 fixed shadow-md w-full z-50">
+      <div class="container">
+        <!-- wrapper -->
+        <div class="flex justify-between items-center">
+          <!-- logo -->
+          <div>
+            <img class="w-33" src="../IMG/LOGO.png" alt="logo" />
+          </div>
+          <!-- nav -->
+          <nav class="headerNav">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Menu</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <!-- toggle menu -->
+          <div class="toggleMenu">
+            <span></span>
+            <span></span>
+          </div>
+          <!-- transparent -->
+          <div class="transparent"></div>
+        </div>
+      </div>
+    </header>
+    <!-- >> banner -->
+    <section class="pt-36 pb-12 md:pt-44 md:pb-20">
+      <div class="container">
+        <!-- title -->
+
+        <div class="flex flex-row items-start justify-center">
+          <svg
+            class="w-5 h-5 font-bold md:w-5 md:h-5 md:mr-1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            fill="#b23920"
+          >
+            <path
+              d="M461.2 18.9C472.7 24 480 35.4 480 48l0 416c0 12.6-7.3 24-18.8 29.1s-24.8 3.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63l0 95.7c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-96C57.3 384 0 326.7 0 256S57.3 128 128 128l84.5 0c61.8-.2 121.4-22.7 167.9-63.3l46.6-40.7c9.4-8.3 22.9-10.2 34.3-5.1zM224 320l0 .2c70.3 2.7 137.8 28.5 192 73.4l0-275.3c-54.2 44.9-121.7 70.7-192 73.4L224 320z"
+            />
+          </svg>
+          <p class="text-primary text-center md:text-center font-bold mb-2">
+            This website provides information about our store. Online
+            transactions are coming soon.
+          </p>
+        </div>
+      </div>
+      <!-- wrapper -->
+      <div class="bg-secondary/20 px-5 pb-10 lg:pb-0">
+        <div
+          class="container mx-auto flex flex-col md:flex-row items-center md:items-center md:justify-between gap-8"
+        >
+          <!-- Text (left on md+) -->
+          <div class="order-2 flex flex-col gap-4 md:order-1">
+            <h1 class="md:max-w-2xl">
+              <span class="font-black">HUNGRY?</span> YOU'RE IN THE RIGHT PLACE
+            </h1>
+            <a href="#contact" class="btn btn--orange w-max md:mx-0"
+              >VIEW OUR MENU</a
+            >
+          </div>
+
+          <!-- Image (right on md+) -->
+          <div class="order-1 md:order-2">
+            <img
+              src="../IMG/banner-home.png"
+              alt="banner logo"
+              class="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- >>welcome pizza -->
+    <section class="py-12 md:py-12">
+      <!-- welcome -->
+      <div class="container">
+        <!-- wrapper -->
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <!-- left -->
+          <div class="relative mt-10 w-fit h-[350px] mx-auto">
+            <img
+              class="relative border-8 border-black rounded-3xl w-[300px]"
+              src="../img/3chefs.png"
+              alt=""
+            />
+            <img
+              class="absolute border-8 border-black rounded-3xl w-[300px] top-30 left-15"
+              src="../img/food.png"
+              alt=""
+            />
+          </div>
+          <!-- right -->
+
+          <div class="mt-7">
+            <h2>WELCOME TO GET PIZZA</h2>
+            <p class="text-primary font-bold mt-5">
+              OUR CHEFS ARE WORKING 24/7 AND ARE READY TO ACCEPT VISITORS AND AT
+              ANY TIME OF THE DAY AND NIGHT
+            </p>
+            <p class="mt-5 pb-20">
+              We would like to take this opportunity to welcome you at our Pizza
+              House. We are offering a warm, friendly atmosphere to share a meal
+              with family and friends at any time of the day or evening.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- >>best food -->
+    <section class="bg-tertiary py-12 md:py-12">
+      <h2 class="flex items-center justify-center text-center text-white">
+        WE OFFER PEOPLE BEST WAY TO EAT BEST FOOD
+      </h2>
+      <div class="container">
+        <!-- wrapper -->
+        <div>
+          <!-- icons (md: left)-->
+          <div class="flex gap-6 justify-center mt-2">
+            <button class="eventTab active">
+              <img src="../img/pizzaa.png" alt="Pizza" class="iconTabs" />
+            </button>
+
+            <button class="eventTab">
+              <img src="../img/burger.png" alt="Burger" class="iconTabs" />
+            </button>
+
+            <button class="eventTab">
+              <img src="../img/chicken.png" alt="Chicken" class="iconTabs" />
+            </button>
+
+            <button class="eventTab">
+              <img src="../img/drinks.png" alt="Drinks" class="iconTabs" />
+            </button>
+
+            <button class="eventTab">
+              <img src="../img/cake.png" alt="Cake" class="iconTabs" />
+            </button>
+          </div>
+          <!-- cards (md: right)-->
+          <div class="eventItem active" id="tabs-1-detail">
+            <div class="eventItemWrap flex gap-6 justify-center">
+              <!-- 1 -->
+              <div class="eventCard">
+                <img src="../IMG/bbq pizza.png" alt="bbq-img" />
+                <h4>PROSCIUTTO PIZZA</h4>
+                <p>$25.00</p>
+                <div class="flex gap-1 text-yellow-400">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <a href="" class="btn2">Read more</a>
+              </div>
+              <!-- 2 -->
+              <div class="eventCard">
+                <img src="../IMG/bbq pizza.png" alt="bbq-img" />
+                <h4>BARE PIZZA</h4>
+                <p>$25.00</p>
+                <div class="flex gap-1 text-yellow-400">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <a href="" class="btn2">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- >> cta -->
+    <section class="bg-primary py-12 md:pt-12 md:pb-0">
+      <div class="container">
+        <!-- wrapper -->
+        <div class="md:grid grid-cols-2 gap-1 items-center">
+          <!-- l -->
+          <div class="hidden md:block">
+            <img src="../IMG/chef.png" alt="chef logo" class="object-cover" />
+          </div>
+          <!-- r -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-white">LET'S CONNECT</h3>
+            <p class="text-white">and get a 10% off bill offers and invites</p>
+            <div
+              class="flex items-center border-2 border-primary overflow-hidden px-4 py-2 bg-white mt-4"
+            >
+              <input
+                type="email"
+                placeholder="YOUR EMAIL ADDRESS"
+                class="flex-1 outline-none text-gray-400 text-sm placeholder:text-gray-400 bg-transparent"
+              />
+              <button
+                class="bg-secondary text-black text-sm px-6 py-2 rounded-md"
+              >
+                SUBSCRIBE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  footer -->
+    <section class="py-12 md:py-20">
+      <div class="container">
+        <!-- wrapper -->
+        <div>
+          <!-- l -->
+          <div class="flex items-center justify-center">
+            <img src="../IMG/LOGO.png" alt="logo" />
+          </div>
+          <!-- r -->
+
+          <div class="mt-8 md:flex md:text-center md:justify-center md:gap-12">
+            <!-- address -->
+            <div class="items-center text-center mt-4">
+              <p class="text-2xl font-bold">ADDRESS</p>
+              <p class="max-w-xs mx-auto">
+                ADDRESS 570 8th Ave, New York, NY 10018 United States
+              </p>
+            </div>
+            <!-- table -->
+            <div class="items-center text-center mt-4">
+              <p class="text-2xl font-bold">BOOK A TABLE</p>
+              <p class="max-w-2xs mx-auto">
+                Dogfood Och Sliders Foodtruck. Under Om Oss Kan Ni Läsa
+              </p>
+            </div>
+            <!-- HOURS -->
+            <div class="items-center text-center mt-4">
+              <p class="text-2xl font-bold">OPENING HOURS</p>
+              <p class="max-w-s mx-auto">
+                MONDAY - FRIDAY <br />
+                10:00 AM - 11.00 PM
+              </p>
+            </div>
+          </div>
+          <p class="text-primary text-center mt-15 md:mt-15">0123456987</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/toggle-menu.js"></script>
+  </body>
+</html>

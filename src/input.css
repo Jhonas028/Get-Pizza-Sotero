@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/poppins-v24-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/poppins-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/poppins-v24-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@theme {
+  --font-primary: "Poppins", sans-serif;
+  --color-primary: #b23920;
+  --color-secondary: #f7b754;
+  --color-tertiary: #223c5f;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth scroll-p-16;
+  }
+  body {
+    @apply overflow-x-hidden font-primary text-black/80 text-base bg-white;
+  }
+  .container {
+    @apply max-w-7xl w-full mx-auto px-4;
+  }
+  h1 {
+    @apply text-[clamp(3rem,6vw,4rem)] font-bold;
+  }
+  h2 {
+    @apply text-[clamp(1.5rem,5vw,2.5rem)] font-bold;
+  }
+  h3 {
+    @apply text-[clamp(1.25rem,4vw,2rem)] font-bold;
+  }
+  h4 {
+    @apply text-[clamp(1rem,3vw,1.75rem)] font-bold;
+  }
+  h5 {
+    @apply text-xl font-semibold;
+  }
+  h6 {
+    @apply text-lg font-semibold;
+  }
+}
+
+@layer components {
+  header {
+    @apply bg-white;
+  }
+  .headerNav ul {
+    @apply flex flex-col gap-5 fixed w-full top-26 text-left 
+    items-start overflow-hidden right-0 h-0 opacity-0 duration-300
+    /* tablet - desktop */
+    md:opacity-100 md:flex-row md:items-center md:top-auto
+    md:h-auto md:static md:shadow-none;
+  }
+
+  .headerNav ul.open {
+    @apply h-fit opacity-100 bg-white shadow-md w-full top-30
+    px-4 pb-3 duration-300
+    /* tablet-desktop */
+    md:shadow-none md:px-0 md:pb-0;
+  }
+
+  .toggleMenu span {
+    @apply inline-block h-1 rounded-xl bg-primary transition-all duration-300 ease-in-out;
+  }
+
+  .toggleMenu span:first-child {
+    @apply w-12;
+  }
+  .toggleMenu span:last-child {
+    @apply w-7.5;
+  }
+
+  .toggleMenu.open span:first-child {
+    @apply w-7.5;
+  }
+  .toggleMenu.open span:last-child {
+    @apply w-12;
+  }
+
+  .toggleMenu {
+    @apply flex flex-col gap-1 
+    /* tablet-desktop */
+    md:hidden;
+  }
+  .transparent {
+    @apply hidden;
+  }
+  .transparent.open {
+    @apply block fixed h-screen w-full backdrop-blur-sm left-0 
+    top-75 duration-300 overflow-y-hidden;
+  }
+
+  /* reusable start */
+
+  /* button */
+  .btn {
+    @apply inline-block px-8 py-3 rounded-lg font-medium
+    text-center md:w-auto;
+  }
+  .btn--orange {
+    @apply bg-primary text-white;
+  }
+
+  .btn2 {
+    @apply border-2 border-primary text-primary px-6 py-2 rounded-lg inline-block hover:bg-primary hover:text-white transition;
+  }
+
+  /* reusable end */
+
+  /* events */
+
+  .iconTabs {
+    @apply w-20 h-20;
+  }
+  .eventCard {
+    @apply flex flex-col items-center rounded-2xl mt-5 px-8 pt-10 pb-8 w-56 md:w-90 shadow-2xl border border-white;
+  }
+  .eventCard img {
+    @apply mb-6 size-24;
+  }
+  .eventCard h4 {
+    @apply text-white font-extrabold text-center tracking-wide mb-1 text-sm uppercase;
+  }
+
+  .eventCard p {
+    @apply text-white text-sm font-medium mb-3;
+  }
+
+  .eventCard .flex {
+    @apply mb-5;
+  }
+
+  .eventCard .btn2 {
+    @apply rounded px-6 py-2 text-sm font-semibold text-white transition-all duration-200;
+    @apply border border-primary hover:bg-primary;
+  }
+}
