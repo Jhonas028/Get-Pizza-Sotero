@@ -204,29 +204,25 @@
     @apply block;
   }
   .menuTab {
-    @apply flex items-center px-5 py-2 font-bold text-sm uppercase  text-tertiary hover:text-secondary;
+    @apply flex items-center justify-center px-5 py-2 font-bold text-sm uppercase text-tertiary flex-1;
+  }
+  .menuTab.active {
+    @apply bg-secondary text-primary border-r border-white last:border-r-0;
   }
 
-  .menuTab.active {
-    @apply border-secondary border-r border-white last:border-r-0;
-  }
-
-  .menuTab.active {
-    @apply bg-secondary text-primary;
-  }
   /* event card */
 
   .iconTabs {
     @apply w-20 h-20;
   }
   .menuCard {
-    @apply flex flex-col items-center rounded-2xl mt-5 px-8 pt-10 pb-8 w-56 md:w-90;
+    @apply flex flex-col items-center rounded-2xl mt-5 pt-10 pb-8 md:w-80 md:border md:border-white;
   }
   .menuCard img {
     @apply mb-6 size-30;
   }
   .menuCard h3 {
-    @apply text-white  text-center tracking-wide mb-1  uppercase;
+    @apply text-white  text-center  mb-1  uppercase;
   }
 
   .menuCard p {
@@ -243,6 +239,6 @@
   }
 
   .eventItemWrap {
-    @apply grid grid-cols-3 gap-6 justify-items-center;
+    @apply grid grid-cols-3 gap-6 justify-items-center md:px-60;
   }
 }

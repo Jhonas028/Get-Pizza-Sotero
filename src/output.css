@@ -677,6 +677,11 @@
       width: calc(var(--spacing) * 5);
     }
   }
+  .md\:w-260 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 260);
+    }
+  }
   .md\:w-\[800px\] {
     @media (width >= 48rem) {
       width: 800px;
@@ -1153,7 +1158,9 @@
   }
   .menuTab {
     display: flex;
+    flex: 1;
     align-items: center;
+    justify-content: center;
     padding-inline: calc(var(--spacing) * 5);
     padding-block: calc(var(--spacing) * 2);
     font-size: var(--text-sm);
@@ -1162,25 +1169,17 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-tertiary);
     text-transform: uppercase;
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-secondary);
-      }
-    }
   }
   .menuTab.active {
     border-right-style: var(--tw-border-style);
     border-right-width: 1px;
-    border-color: var(--color-secondary);
     border-color: var(--color-white);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
     &:last-child {
       border-right-style: var(--tw-border-style);
       border-right-width: 0px;
     }
-  }
-  .menuTab.active {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
   }
   .iconTabs {
     height: calc(var(--spacing) * 20);
@@ -1189,15 +1188,20 @@
   .menuCard {
     margin-top: calc(var(--spacing) * 5);
     display: flex;
-    width: calc(var(--spacing) * 56);
     flex-direction: column;
     align-items: center;
     border-radius: var(--radius-2xl);
-    padding-inline: calc(var(--spacing) * 8);
     padding-top: calc(var(--spacing) * 10);
     padding-bottom: calc(var(--spacing) * 8);
     @media (width >= 48rem) {
-      width: calc(var(--spacing) * 90);
+      width: calc(var(--spacing) * 80);
+    }
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+    @media (width >= 48rem) {
+      border-color: var(--color-white);
     }
   }
   .menuCard img {
@@ -1208,8 +1212,6 @@
   .menuCard h3 {
     margin-bottom: calc(var(--spacing) * 1);
     text-align: center;
-    --tw-tracking: var(--tracking-wide);
-    letter-spacing: var(--tracking-wide);
     color: var(--color-white);
     text-transform: uppercase;
   }
@@ -1252,6 +1254,9 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-items: center;
     gap: calc(var(--spacing) * 6);
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 60);
+    }
   }
 }
 @property --tw-border-style {
