@@ -83,10 +83,13 @@
   }
 
   .headerNav ul.open {
-    @apply h-fit opacity-100 bg-white shadow-md w-full top-30
-    px-4 pb-3 duration-300
+    @apply h-fit opacity-100 bg-primary shadow-md w-full top-29.5
+    py-9 px-4 pb-3 duration-300
     /* tablet-desktop */
     md:shadow-none md:px-0 md:pb-0;
+  }
+  .headerNav ul li a {
+    @apply font-bold text-white;
   }
 
   .toggleMenu span {
@@ -117,7 +120,7 @@
   }
   .transparent.open {
     @apply block fixed h-screen w-full backdrop-blur-sm left-0 
-    top-75 duration-300 overflow-y-hidden;
+    top-80 duration-300 overflow-y-hidden;
   }
 
   /* reusable start */
