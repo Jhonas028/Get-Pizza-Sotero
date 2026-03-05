@@ -181,4 +181,15 @@
   .eventTab.active {
     @apply border-2 border-secondary;
   }
+  .tns-nav {
+    @apply text-center mt-4;
+  }
+
+  .tns-nav button {
+    @apply w-2.5 h-2.5 rounded-full bg-gray-300 border-0 mx-1 p-0 cursor-pointer inline-block;
+  }
+
+  .tns-nav button.tns-nav-active {
+    @apply bg-primary;
+  }
 }
