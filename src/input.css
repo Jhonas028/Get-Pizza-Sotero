@@ -51,10 +51,10 @@
     @apply max-w-7xl w-full mx-auto px-4;
   }
   h1 {
-    @apply text-[clamp(2rem,6vw,4rem)] font-bold;
+    @apply text-[clamp(3rem,6vw,4rem)] font-bold;
   }
   h2 {
-    @apply text-[clamp(1.5rem,5vw,2.5rem)] font-bold;
+    @apply text-[clamp(2rem,5vw,2.5rem)] font-bold;
   }
   h3 {
     @apply text-[clamp(1.25rem,4vw,2rem)] font-bold;
