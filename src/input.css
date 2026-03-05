@@ -180,6 +180,8 @@
   .eventTab.active {
     @apply border-2 border-secondary;
   }
+
+  /* tns */
   .tns-nav {
     @apply text-center mt-4;
   }
@@ -190,5 +192,57 @@
 
   .tns-nav button.tns-nav-active {
     @apply bg-primary;
+  }
+
+  /* menu tab */
+
+  .menuItem {
+    @apply hidden;
+  }
+
+  .menuItem.active {
+    @apply block;
+  }
+  .menuTab {
+    @apply flex items-center px-5 py-2 font-bold text-sm uppercase  text-tertiary hover:text-secondary;
+  }
+
+  .menuTab.active {
+    @apply border-secondary border-r border-white last:border-r-0;
+  }
+
+  .menuTab.active {
+    @apply bg-secondary text-primary;
+  }
+  /* event card */
+
+  .iconTabs {
+    @apply w-20 h-20;
+  }
+  .menuCard {
+    @apply flex flex-col items-center rounded-2xl mt-5 px-8 pt-10 pb-8 w-56 md:w-90;
+  }
+  .menuCard img {
+    @apply mb-6 size-30;
+  }
+  .menuCard h3 {
+    @apply text-white  text-center tracking-wide mb-1  uppercase;
+  }
+
+  .menuCard p {
+    @apply text-white text-sm font-medium mb-3;
+  }
+
+  .menuCard .flex {
+    @apply mb-5;
+  }
+
+  .menuCard .btn2 {
+    @apply rounded px-6 py-2 text-sm font-semibold text-white transition-all duration-200;
+    @apply border border-primary hover:bg-primary;
+  }
+
+  .eventItemWrap {
+    @apply grid grid-cols-3 gap-6 justify-items-center;
   }
 }
