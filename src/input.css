@@ -124,12 +124,15 @@
   /* button */
   .btn {
     @apply inline-block px-8 py-3 rounded-lg font-medium
-    text-center md:w-auto;
-  }
-  .btn--orange {
-    @apply bg-primary text-white;
+  text-center md:w-auto
+  transition-all duration-200 ease-in-out;
   }
 
+  .btn--orange {
+    @apply bg-primary text-white
+  hover:brightness-110 hover:shadow-lg hover:-translate-y-0.5
+  active:brightness-95 active:translate-y-0 active:shadow-md;
+  }
   .btn2 {
     @apply border-2 border-primary text-primary px-6 py-2 rounded-lg inline-block hover:bg-primary hover:text-white transition;
   }
