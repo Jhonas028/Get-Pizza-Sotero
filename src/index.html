@@ -21,10 +21,10 @@
         <div class="flex justify-between items-center">
           <!-- logo -->
           <div>
-            <img class="w-33" src="../IMG/LOGO.png" alt="logo" />
+            <img class="w-33" src="../IMG/LOGO.png" alt="Get Pizza logo" />
           </div>
           <!-- nav -->
-          <nav class="headerNav">
+          <nav class="headerNav" aria-label="Main navigation">
             <ul>
               <li>
                 <a href="./index.html" class="font-bold text-primary">Home</a>
@@ -34,27 +34,35 @@
               <li><a href="./contact.html">Contact</a></li>
             </ul>
           </nav>
-          <!-- toggle menu -->
-          <div class="toggleMenu">
+          <!-- toggle menu (hamburger) -->
+          <div
+            class="toggleMenu"
+            aria-label="Toggle navigation menu"
+            role="button"
+            tabindex="0"
+          >
             <span></span>
             <span></span>
           </div>
-          <!-- transparent -->
+          <!-- overlay backdrop -->
           <div class="transparent"></div>
         </div>
       </div>
     </header>
+
     <!-- >> banner -->
     <section class="pt-36 pb-1 md:pt-44 md:pb-0">
       <div class="container">
-        <!-- title -->
-
+        <!-- announcement bar -->
         <div class="flex flex-row items-start justify-center">
+          <!-- decorative megaphone icon -->
           <svg
             class="w-5 h-5 font-bold md:w-5 md:h-5 md:mr-1 md:pb-0"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
             fill="#b23920"
+            aria-hidden="true"
+            focusable="false"
           >
             <path
               d="M461.2 18.9C472.7 24 480 35.4 480 48l0 416c0 12.6-7.3 24-18.8 29.1s-24.8 3.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63l0 95.7c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-96C57.3 384 0 326.7 0 256S57.3 128 128 128l84.5 0c61.8-.2 121.4-22.7 167.9-63.3l46.6-40.7c9.4-8.3 22.9-10.2 34.3-5.1zM224 320l0 .2c70.3 2.7 137.8 28.5 192 73.4l0-275.3c-54.2 44.9-121.7 70.7-192 73.4L224 320z"
@@ -66,17 +74,19 @@
           </p>
         </div>
       </div>
-      <!-- wrapper -->
+
+      <!-- hero wrapper -->
       <div class="bg-secondary/20 px-5 pb-10 lg:pb-0 md:px-80">
         <div
           class="container mx-auto flex flex-col md:flex-row items-center md:items-center md:justify-between gap-8"
         >
           <!-- Text (left on md+) -->
           <div class="order-2 flex flex-col gap-4 md:order-1">
-            <h1 class="">
+            <h1>
               <span class="font-black">HUNGRY?</span> YOU'RE IN THE RIGHT PLACE
             </h1>
-            <a href="#contact" class="btn btn--orange w-max md:mx-0"
+            <!-- FIX: was href="#contact" — now links to the menu page -->
+            <a href="./menu.html" class="btn btn--orange w-max md:mx-0"
               >VIEW OUR MENU</a
             >
           </div>
@@ -85,34 +95,35 @@
           <div class="order-1 md:order-2">
             <img
               src="../IMG/banner-home.png"
-              alt="banner logo"
+              alt="Delicious pizza on a wooden board"
               class="w-full h-auto rounded-lg"
             />
           </div>
         </div>
       </div>
     </section>
-    <!-- >>welcome pizza -->
+
+    <!-- >> welcome pizza -->
     <section class="py-5 md:pb-20">
       <!-- welcome -->
       <div class="container">
         <!-- wrapper -->
         <div class="grid grid-cols-1 md:grid-cols-2">
-          <!-- left -->
+          <!-- left: stacked images -->
           <div class="relative mt-10 w-fit h-[350px] mx-auto">
             <img
               class="relative border-8 border-black rounded-3xl w-[300px]"
               src="../img/3chefs.png"
-              alt=""
+              alt="Three Get Pizza chefs smiling together"
             />
             <img
               class="absolute border-8 border-black rounded-3xl w-[300px] top-40 left-15"
               src="../img/food.png"
-              alt=""
+              alt="Freshly prepared pizza served on a plate"
             />
           </div>
-          <!-- right -->
 
+          <!-- right: welcome text -->
           <div class="mt-25">
             <h2>WELCOME TO GET PIZZA</h2>
             <p class="text-primary font-bold mt-5 max-w-xl">
@@ -128,7 +139,8 @@
         </div>
       </div>
     </section>
-    <!-- >>best food -->
+
+    <!-- >> best food (tabbed menu section) -->
     <section class="bg-tertiary py-12 md:py-12">
       <h2 class="flex items-center justify-center text-center text-white">
         WE OFFER PEOPLE BEST WAY TO EAT BEST FOOD
@@ -136,209 +148,350 @@
       <div class="container">
         <!-- wrapper -->
         <div>
-          <!-- icons (md: left)-->
-          <div class="flex gap-2 justify-center mt-2">
-            <button class="eventTab active" id="tabs-1">
-              <img src="../img/pizzaa.png" alt="Pizza" class="iconTabs" />
+          <!-- category tab icons -->
+          <div
+            class="flex gap-2 justify-center mt-2"
+            role="tablist"
+            aria-label="Food categories"
+          >
+            <button
+              class="eventTab active"
+              id="tabs-1"
+              role="tab"
+              aria-selected="true"
+              aria-controls="tabs-1-detail"
+            >
+              <img
+                src="../img/pizzaa.png"
+                alt="Pizza category"
+                class="iconTabs"
+              />
             </button>
-
-            <button class="eventTab" id="tabs-2">
-              <img src="../img/burger.png" alt="Burger" class="iconTabs" />
+            <button
+              class="eventTab"
+              id="tabs-2"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tabs-2-detail"
+            >
+              <img
+                src="../img/burger.png"
+                alt="Burger category"
+                class="iconTabs"
+              />
             </button>
-
-            <button class="eventTab" id="tabs-3">
-              <img src="../img/chicken.png" alt="Chicken" class="iconTabs" />
+            <button
+              class="eventTab"
+              id="tabs-3"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tabs-3-detail"
+            >
+              <img
+                src="../img/chicken.png"
+                alt="Chicken category"
+                class="iconTabs"
+              />
             </button>
-
-            <button class="eventTab" id="tabs-4">
-              <img src="../img/drinks.png" alt="Drinks" class="iconTabs" />
+            <button
+              class="eventTab"
+              id="tabs-4"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tabs-4-detail"
+            >
+              <img
+                src="../img/drinks.png"
+                alt="Drinks category"
+                class="iconTabs"
+              />
             </button>
-
-            <button class="eventTab" id="tabs-5">
-              <img src="../img/cake.png" alt="Cake" class="iconTabs" />
+            <button
+              class="eventTab"
+              id="tabs-5"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tabs-5-detail"
+            >
+              <img
+                src="../img/cake.png"
+                alt="Cake & desserts category"
+                class="iconTabs"
+              />
             </button>
           </div>
-          <!-- cards (md: right)-->
+
+          <!-- tab panels -->
           <div>
-            <!-- item 1 -->
-            <div class="eventItem active" id="tabs-1-detail">
+            <!-- item 1: Pizza -->
+            <div
+              class="eventItem active"
+              id="tabs-1-detail"
+              role="tabpanel"
+              aria-labelledby="tabs-1"
+            >
               <div class="eventItemWrap flex gap-6 justify-center">
-                <!-- a -->
                 <div class="eventCard">
-                  <img src="../IMG/bbq pizza.png" alt="bbq-img" />
+                  <img
+                    src="../IMG/bbq pizza.png"
+                    alt="Prosciutto pizza with toppings"
+                  />
                   <h4>PROSCIUTTO PIZZA</h4>
                   <p>$25.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <!-- FIX: was href="" — use "#" to prevent unintended page reload -->
+                  <a href="#" class="btn2">Read more</a>
                 </div>
-                <!-- b -->
                 <div class="eventCard">
-                  <img src="../IMG/bbq pizza.png" alt="bbq-img" />
+                  <img
+                    src="../IMG/bbq pizza.png"
+                    alt="Bare pizza with classic toppings"
+                  />
                   <h4>BARE PIZZA</h4>
                   <p>$25.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
               </div>
             </div>
-            <!-- item 2 -->
-            <div class="eventItem" id="tabs-2-detail">
+
+            <!-- item 2: Burger -->
+            <!-- NOTE: Both burger cards share the same name "CHEESE BURGER" — consider differentiating (e.g. Single vs Double) -->
+            <div
+              class="eventItem"
+              id="tabs-2-detail"
+              role="tabpanel"
+              aria-labelledby="tabs-2"
+            >
               <div class="eventItemWrap flex gap-6 justify-center">
-                <!-- a -->
                 <div class="eventCard">
-                  <img src="../IMG/CHEESE BURGER.png" alt="burger-img" />
+                  <img
+                    src="../IMG/CHEESE BURGER.png"
+                    alt="Classic cheese burger"
+                  />
                   <h4>CHEESE BURGER</h4>
                   <p>$15.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
-                <!-- b -->
                 <div class="eventCard">
-                  <img src="../IMG/CHEESE BURGER.png" alt="burger-img" />
+                  <img
+                    src="../IMG/CHEESE BURGER.png"
+                    alt="Double cheese burger"
+                  />
                   <h4>CHEESE BURGER</h4>
                   <p>$28.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
               </div>
             </div>
-            <!-- item 3 -->
-            <div class="eventItem" id="tabs-3-detail">
+
+            <!-- item 3: Chicken -->
+            <div
+              class="eventItem"
+              id="tabs-3-detail"
+              role="tabpanel"
+              aria-labelledby="tabs-3"
+            >
               <div class="eventItemWrap flex gap-6 justify-center">
-                <!-- a -->
                 <div class="eventCard">
-                  <img src="../IMG/CHICKEN WITH BREAD.png" alt="burger-img" />
+                  <img
+                    src="../IMG/CHICKEN WITH BREAD.png"
+                    alt="Chicken fillet served with bread"
+                  />
                   <h4>FILLET WITH BREAD</h4>
                   <p>$45.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
-                <!-- b -->
                 <div class="eventCard">
-                  <img src="../IMG/CHICKEN WITH BREAD.png" alt="burger-img" />
-                  <h4>FILLET WITH BREADR</h4>
+                  <img
+                    src="../IMG/CHICKEN WITH BREAD.png"
+                    alt="Large chicken fillet served with bread"
+                  />
+                  <!-- FIX: was "FILLET WITH BREADR" (typo) -->
+                  <h4>FILLET WITH BREAD</h4>
                   <p>$58.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
               </div>
             </div>
-            <!-- item 4 -->
-            <div class="eventItem" id="tabs-4-detail">
+
+            <!-- item 4: Drinks -->
+            <!-- NOTE: Both drink cards share the same name "ORANGE DRINKS" — consider differentiating (e.g. Small vs Large) -->
+            <div
+              class="eventItem"
+              id="tabs-4-detail"
+              role="tabpanel"
+              aria-labelledby="tabs-4"
+            >
               <div class="eventItemWrap flex gap-6 justify-center">
-                <!-- a -->
                 <div class="eventCard">
-                  <img src="../IMG/ORANGE DRINK.png" alt="burger-img" />
+                  <img
+                    src="../IMG/ORANGE DRINK.png"
+                    alt="Fresh orange drink in a glass"
+                  />
                   <h4>ORANGE DRINKS</h4>
                   <p>$10.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
-                <!-- b -->
                 <div class="eventCard">
-                  <img src="../IMG/ORANGE DRINK.png" alt="burger-img" />
+                  <img
+                    src="../IMG/ORANGE DRINK.png"
+                    alt="Large fresh orange drink in a glass"
+                  />
                   <h4>ORANGE DRINKS</h4>
                   <p>$12.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
               </div>
             </div>
-            <!-- item 5 -->
-            <div class="eventItem" id="tabs-5-detail">
+
+            <!-- item 5: Cake -->
+            <!-- NOTE: Both cake cards share the same name "MUFFIN" — consider differentiating (e.g. Chocolate vs Vanilla) -->
+            <div
+              class="eventItem"
+              id="tabs-5-detail"
+              role="tabpanel"
+              aria-labelledby="tabs-5"
+            >
               <div class="eventItemWrap flex gap-6 justify-center">
-                <!-- a -->
                 <div class="eventCard">
-                  <img src="../IMG/MUFFIN-CAKE.png" alt="burger-img" />
+                  <img
+                    src="../IMG/MUFFIN-CAKE.png"
+                    alt="Freshly baked muffin"
+                  />
                   <h4>MUFFIN</h4>
                   <p>$23.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
-                <!-- b -->
                 <div class="eventCard">
-                  <img src="../IMG/MUFFIN-CAKE.png" alt="burger-img" />
+                  <img
+                    src="../IMG/MUFFIN-CAKE.png"
+                    alt="Assorted muffin pack"
+                  />
                   <h4>MUFFIN</h4>
                   <p>$20.00</p>
-                  <div class="flex gap-1 text-yellow-400">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                  <div
+                    class="flex gap-1 text-yellow-400"
+                    aria-label="5 out of 5 stars"
+                  >
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
                   </div>
-                  <a href="" class="btn2">Read more</a>
+                  <a href="#" class="btn2">Read more</a>
                 </div>
               </div>
             </div>
           </div>
+          <!-- end tab panels -->
         </div>
       </div>
     </section>
-    <!-- >> cta -->
+
+    <!-- >> CTA / newsletter -->
     <section class="bg-primary py-12 md:pt-12 md:pb-0 md:px-130">
       <div class="container">
         <!-- wrapper -->
         <div class="md:grid grid-cols-2 items-center">
-          <!-- l -->
+          <!-- left: chef image (hidden on mobile) -->
           <div class="hidden md:block">
-            <img src="../IMG/chef.png" alt="chef logo" class="object-cover" />
+            <img
+              src="../IMG/chef.png"
+              alt="Get Pizza chef holding a freshly baked pizza"
+              class="object-cover"
+            />
           </div>
-          <!-- r -->
+          <!-- right: subscribe form -->
           <div class="flex flex-col items-center">
             <h3 class="text-white">LET'S CONNECT</h3>
             <p class="text-white">and get a 10% off bill offers and invites</p>
@@ -348,9 +501,11 @@
               <input
                 type="email"
                 placeholder="YOUR EMAIL ADDRESS"
+                aria-label="Enter your email address to subscribe"
                 class="flex-1 outline-none text-gray-400 text-sm placeholder:text-gray-400 bg-transparent"
               />
               <button
+                type="button"
                 class="bg-secondary text-black text-sm px-6 py-2 rounded-md"
               >
                 SUBSCRIBE
@@ -360,42 +515,49 @@
         </div>
       </div>
     </section>
+
     <!-- >> footer -->
     <footer class="py-12 md:py-20">
       <div class="container">
         <!-- wrapper -->
         <div>
-          <!-- l -->
+          <!-- logo -->
           <div class="flex items-center justify-center">
-            <img src="../IMG/LOGO.png" alt="logo" />
+            <img src="../IMG/LOGO.png" alt="Get Pizza logo" />
           </div>
-          <!-- r -->
 
+          <!-- footer info columns -->
           <div class="mt-8 md:flex md:text-center md:justify-center md:gap-12">
             <!-- address -->
             <div class="items-center text-center mt-4">
               <p class="text-2xl font-bold">ADDRESS</p>
-              <p class="max-w-xs mx-auto">
-                ADDRESS 570 8th Ave, New York, NY 10018 United States
-              </p>
+              <address class="not-italic max-w-xs mx-auto">
+                570 8th Ave, New York, NY 10018, United States
+              </address>
             </div>
-            <!-- table -->
+            <!-- book a table -->
             <div class="items-center text-center mt-4">
               <p class="text-2xl font-bold">BOOK A TABLE</p>
               <p class="max-w-2xs mx-auto">
                 Dogfood Och Sliders Foodtruck. Under Om Oss Kan Ni Läsa
               </p>
             </div>
-            <!-- HOURS -->
+            <!-- opening hours -->
             <div class="items-center text-center mt-4">
               <p class="text-2xl font-bold">OPENING HOURS</p>
               <p class="max-w-s mx-auto">
-                MONDAY - FRIDAY <br />
-                10:00 AM - 11.00 PM
+                MONDAY – FRIDAY <br />
+                10:00 AM – 11:00 PM
               </p>
             </div>
           </div>
-          <p class="text-primary text-center mt-15 md:mt-15">0123456987</p>
+
+          <!-- phone -->
+          <p class="text-primary text-center mt-15 md:mt-15">
+            <a href="tel:0123456987" aria-label="Call us at 0123456987"
+              >0123456987</a
+            >
+          </p>
         </div>
       </div>
     </footer>
